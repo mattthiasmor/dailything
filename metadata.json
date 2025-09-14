@@ -1,0 +1,5 @@
+{
+  "name": "Daily Momentum",
+  "description": "A daily checklist application that helps you track your progress and sends a report to your accountability partner. The checklist resets every day, and you can get a fresh dose of inspiration with an AI-generated quote.",
+  "requestFramePermissions": []
+}
