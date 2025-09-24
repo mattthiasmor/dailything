@@ -10,16 +10,23 @@ interface TaskItemProps {
 const TaskItem: React.FC<TaskItemProps> = ({ task, onToggle, onDelete }) => {
   return (
     <li className="flex items-center justify-between bg-slate-700/50 p-3.5 rounded-lg border border-slate-700 hover:bg-slate-600/50 hover:-translate-y-1 transition-all duration-300 group">
-      <div className="flex items-center gap-3">
-        <input
-          type="checkbox"
-          checked={task.completed}
-          onChange={() => onToggle(task.id)}
-          className="h-5 w-5 rounded bg-slate-600 border-slate-500 text-blue-500 focus:ring-blue-500 focus:ring-offset-slate-800 cursor-pointer"
-        />
-        <span className={`text-slate-300 ${task.completed ? 'line-through text-slate-500' : ''} transition-colors`}>
-          {task.text}
-        </span>
+      <div className="flex-1">
+        <div className="flex items-center gap-3">
+          <input
+            type="checkbox"
+            checked={task.completed}
+            onChange={() => onToggle(task.id)}
+            className="h-5 w-5 rounded bg-slate-600 border-slate-500 text-blue-500 focus:ring-blue-500 focus:ring-offset-slate-800 cursor-pointer"
+          />
+          <span className={`text-slate-300 ${task.completed ? 'line-through text-slate-500' : ''} transition-colors`}>
+            {task.text}
+          </span>
+        </div>
+        {task.details && (
+          <p className={`text-slate-400 text-sm mt-1 ml-8 ${task.completed ? 'text-slate-600' : ''}`}>
+            {task.details}
+          </p>
+        )}
       </div>
       <button
         onClick={() => onDelete(task.id)}
@@ -33,5 +40,4 @@ const TaskItem: React.FC<TaskItemProps> = ({ task, onToggle, onDelete }) => {
     </li>
   );
 };
-
 export default TaskItem;

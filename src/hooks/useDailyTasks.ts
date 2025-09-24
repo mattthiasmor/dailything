@@ -7,11 +7,11 @@ interface StoredTasks {
 }
 
 const PREDEFINED_TASKS: Task[] = [
-  { id: 'preset-1', text: 'Gym', completed: false },
-  { id: 'preset-2', text: 'Hustle', completed: false },
-  { id: 'preset-3', text: 'Study', completed: false },
-  { id: 'preset-4', text: 'No Brainrot', completed: false },
-  { id: 'preset-5', text: 'Time with God', completed: false },
+  { id: 'preset-1', text: 'Gym', completed: false, details: 'AT LEAST upper body 2x and lower body 1x a week. Caloric deficit, high protein.' },
+  { id: 'preset-2', text: 'Hustle', completed: false, details: 'AT LEAST 3 hours.' },
+  { id: 'preset-3', text: 'Study', completed: false, details: 'AT LEAST 1 hour.' },
+  { id: 'preset-4', text: 'No Brainrot', completed: false, details: 'No gaming, scrolling at all. MAX podcast at gym or on the way. No music but chants either.' },
+  { id: 'preset-5', text: 'Time with God', completed: false, details: 'AT LEAST 2 times of focused prayer and bible reading.' },
 ];
 
 const getTodayString = () => {
