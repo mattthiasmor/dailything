@@ -23,7 +23,7 @@ const getTodayString = () => {
 };
 
 const sendWebhookReport = async (tasks: Task[], lastCompletedTaskText?: string) => {
-  const webhookUrl = 'https://ayeiropsa.app.n8n.cloud/webhook/fd660c55-980b-418d-b8d9-80830cacdfb6';
+  const webhookUrl = 'https://skadllqwd.app.n8n.cloud/webhook/fd660c55-980b-418d-b8d9-80830cacdfb6';
 
   // Basic check to ensure the hardcoded URL is valid before sending.
   if (!URL.canParse(webhookUrl)) {
@@ -117,7 +117,7 @@ const useDailyTasks = () => {
 
   const toggleTask = (id: string) => {
     let lastCompletedTaskText: string | undefined;
-    const updatedTasks = tasks.map(task => {
+    const updatedTasks = tasks.map((task: Task) => {
       if (task.id === id) {
         const isNowCompleted = !task.completed;
         if (isNowCompleted) {
@@ -133,7 +133,7 @@ const useDailyTasks = () => {
   };
 
   const deleteTask = (id: string) => {
-    const updatedTasks = tasks.filter(task => task.id !== id);
+    const updatedTasks = tasks.filter((task: Task) => task.id !== id);
     setTasks(updatedTasks);
     saveTasks(updatedTasks);
     sendWebhookReport(updatedTasks);
