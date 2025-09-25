@@ -23,7 +23,7 @@ const getTodayString = () => {
 };
 
 const sendWebhookReport = async (tasks: Task[], lastCompletedTaskText?: string) => {
-  const webhookUrl = 'https://skadllqwd.app.n8n.cloud/webhook/fd660c55-980b-418d-b8d9-80830cacdfb6';
+  const webhookUrl = 'https://skadllqwd.app.n8n.cloud/webhook-test/fd660c55-980b-418d-b8d9-80830cacdfb6';
 
   // Basic check to ensure the hardcoded URL is valid before sending.
   if (!URL.canParse(webhookUrl)) {
